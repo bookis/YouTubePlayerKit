@@ -24,7 +24,9 @@ extension YouTubePlayer.HTML {
     ///   - bundle: The Bundle. Default value `.module`
     ///   - resource: The Resource. Default value `.default`
     init(
+        videoId: String?,
         options: YouTubePlayer.Options,
+        iFrameFeatures: String = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share",
         bundle: Bundle = .module,
         resource: Resource = .default
     ) throws {
@@ -47,6 +49,8 @@ extension YouTubePlayer.HTML {
         // with YouTubePlayer Options JSON
         htmlContents = .init(
             format: htmlContents,
+            videoId ?? "",
+            iFrameFeatures,
             options.json
         )
         // Initialize HTML contents

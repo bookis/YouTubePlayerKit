@@ -172,6 +172,7 @@ extension YouTubePlayerWebView {
         do {
             // Try to initialize YouTubePlayer HTML
             youTubePlayerHTML = try .init(
+                videoId: player.source?.id,
                 options: .init(
                     playerSource: player.source,
                     playerConfiguration: player.configuration,
