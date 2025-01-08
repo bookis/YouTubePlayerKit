@@ -105,6 +105,9 @@ public extension YouTubePlayer {
         /// An optional custom user agent of the underlying web view
         public var customUserAgent: String?
 
+        /// An optional custom `iframe` `allow` featrures
+        public var customIFrameFeatures: String?
+
         // MARK: Initializer
         
         /// Creates a new instance of `YouTubePlayer.Configuration`
@@ -131,7 +134,8 @@ public extension YouTubePlayer {
             showRelatedVideos: Bool? = nil,
             startTime: Int? = nil,
             referrer: String? = nil,
-            customUserAgent: String? = nil
+            customUserAgent: String? = nil,
+            customIFrameFeatures: String? = nil
         ) {
             self.automaticallyAdjustsContentInsets = automaticallyAdjustsContentInsets
             self.allowsPictureInPictureMediaPlayback = allowsPictureInPictureMediaPlayback
@@ -156,6 +160,7 @@ public extension YouTubePlayer {
             self.startTime = startTime
             self.referrer = referrer
             self.customUserAgent = customUserAgent
+            self.customIFrameFeatures = customIFrameFeatures
         }
         
     }

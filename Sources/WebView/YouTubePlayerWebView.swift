@@ -177,7 +177,8 @@ extension YouTubePlayerWebView {
                     playerSource: player.source,
                     playerConfiguration: player.configuration,
                     originURL: self.originURL
-                )
+                ),
+                iFrameFeatures: player.configuration.customIFrameFeatures ?? .default
             )
         } catch {
             // Send error state

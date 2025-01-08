@@ -26,7 +26,7 @@ extension YouTubePlayer.HTML {
     init(
         videoId: String?,
         options: YouTubePlayer.Options,
-        iFrameFeatures: String = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share",
+        iFrameFeatures: YouTubePlayer.IFrameFeatures,
         bundle: Bundle = .module,
         resource: Resource = .default
     ) throws {
